@@ -7,7 +7,7 @@ const Cart = () => {
   const { cart } = useSelector((state) => state);
   const [amount, setAmount] = useState(0);
 
-  // console.log(cart)
+  
   useEffect(() => {
     setAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
